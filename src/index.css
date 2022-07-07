@@ -60,6 +60,8 @@ body::-webkit-scrollbar-thumb {
 	padding: 0 0.5em;
 	display: flex;
 	align-items: center;
+	color: #191919;
+	font-weight: bold;
 }
 
 .menuLabel:hover{
@@ -92,10 +94,6 @@ body::-webkit-scrollbar-thumb {
 	margin: 0.5em;
 	font-weight: lighter;
 	font-size: 2em;
-}
-
-.expressIcon{
-	border-radius: 50%;
 }
 
 .banner{
@@ -230,11 +228,6 @@ body::-webkit-scrollbar-thumb {
 	margin: 1em 0;
 }
 
-.banner > small{
-	margin: 1em 0;
-	font-size: 1.2em;
-}
-
 .resume button{
 	font-size: 1em;
 	border: 2px solid white;
@@ -366,6 +359,21 @@ body::-webkit-scrollbar-thumb {
 
 .projTech:first-child{
 	margin-left: 0;
+}
+
+.banner-info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.banner-info > *{
+	margin: 0.5em 0;
+}
+
+.banner-info small{
+	font-size: 1.2em;
+	margin-bottom: 1em;
 }
 
 @keyframes notif-grow {

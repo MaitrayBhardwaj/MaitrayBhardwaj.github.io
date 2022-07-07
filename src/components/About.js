@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+
 import { BsList, BsGeoAltFill, BsEnvelopeFill } from 'react-icons/bs'
 import { 
 	SiReact, SiJavascript, 
@@ -12,13 +15,33 @@ import SelfImg from '../assets/self.jpg'
 import Resume from '../assets/Resume.pdf'
 
 function About (props) {
+	const [isNotifVis, setIsNotifVis] = useState(false)
+	const copyNotif = (
+		<motion.div
+			animate={{ x: 0 }}
+			initial={{ x: 100 }}
+			exit={{x: 250}} 
+			className="notif"
+		>
+			Copied to clipboard
+		</motion.div>
+	)
+
+	const addCopyNotif = () => {
+		setIsNotifVis(true)
+		navigator.clipboard.writeText('maitraybhardwaj@gmail.com')
+		setTimeout(() => { setIsNotifVis(false) }, 2500)
+	}
+
 	return (
-		<div id="about">
+		<div id="about" onClick={() => { props.isNavbar && props.toggleNavbar() }}>
 			<div className="banner">
 				<button className="menuToggle" onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
-				<div className="info">
+				<motion.div className="info"
+					initial={{ x: 30, opacity: 0.25 }}
+					animate={{ x: 0, opacity: 1 }}>
 					<div className="bio">
 						<img src={SelfImg} alt="Maitray Bhardwaj" />
 						<div className="locMail">
@@ -28,7 +51,7 @@ function About (props) {
 								</div>
 								<span>Delhi, India</span>
 							</div>
-							<div className="email">
+							<div className="email" onClick={addCopyNotif}>
 								<div className="mailIcon">
 									<BsEnvelopeFill />
 								</div>
@@ -55,45 +78,48 @@ function About (props) {
 						As mentioned before, I also have experience working in backend development using NodeJS and popular Non-Relational Database Management Systems.
 						</div>
 						<div>
-							<a target="_blank" href={Resume} download="" className="resume">
+							<a target="_blank" rel="noreferrer" href={Resume} download="" className="resume">
 								<button>Resume</button>
 							</a>
 						</div>
 					<h2>## Toolkit</h2>
 					<div className="skills">
-						<a href="https://reactjs.org" target="_blank" className="skill" title="React">
+						<a href="https://reactjs.org" target="_blank" rel="noreferrer" className="skill" title="React">
 							<SiReact />
 						</a>
-						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" className="skill" title="JavaScript">
+						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" className="skill" title="JavaScript">
 							<SiJavascript />						
 						</a>
-						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" className="skill" title="CSS3">
+						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer" className="skill" title="CSS3">
 							<FaCss3 />
 						</a>
-						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" className="skill" title="HTML5">
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer" className="skill" title="HTML5">
 							<SiHtml5 />
 						</a>
-						<a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" target="_blank" className="skill" title="Bootstrapv5.2">
+						<a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" target="_blank" rel="noreferrer" className="skill" title="Bootstrapv5.2">
 							<SiBootstrap />
 						</a>
-						<a href="https://nodejs.org/en/" target="_blank" className="skill" title="NodeJS">
+						<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer" className="skill" title="NodeJS">
 							<SiNodedotjs />
 						</a>
-						<a href="https://expressjs.com" target="_blank" className="skill" title="ExpressJS">
+						<a href="https://expressjs.com" target="_blank" rel="noreferrer" className="skill" title="ExpressJS">
 							<SiExpress />
 						</a>
-						<a href="https://www.mongodb.com" target="_blank" className="skill" title="MongoDB">
+						<a href="https://www.mongodb.com" target="_blank" rel="noreferrer" className="skill" title="MongoDB">
 							<SiMongodb />
 						</a>
-						<a href="https://www.python.org" target="_blank" className="skill" title="Python3">
+						<a href="https://www.python.org" target="_blank" rel="noreferrer" className="skill" title="Python3">
 							<SiPython />
 						</a>
-						<a href="https://cplusplus.com" target="_blank" className="skill" title="C++">
+						<a href="https://cplusplus.com" target="_blank" rel="noreferrer" className="skill" title="C++">
 							<SiCplusplus />
 						</a>
 					</div>
-				</div>
+				</motion.div>
 			</div>
+			<AnimatePresence>
+				{ isNotifVis && copyNotif }
+			</AnimatePresence>
 		</div>
 	)
 }
