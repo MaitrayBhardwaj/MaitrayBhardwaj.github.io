@@ -7,7 +7,7 @@ import {
 	SiMongodb, SiExpress,
 	SiBootstrap, SiHtml5, 
 	SiPython, SiNodedotjs, 
-	SiCplusplus } from 'react-icons/si'
+	SiCplusplus, SiTailwindcss } from 'react-icons/si'
 
 import { FaCss3 } from 'react-icons/fa'
 
@@ -63,19 +63,20 @@ function About (props) {
 						</div>
 					</div>
 					<h1># About Me</h1>
-						<div className="desc">My name is Maitray Bhardwaj. I am a web developer. I am currently pursuing Bachelors in Computer Science(Hons.) from Hansraj College, Delhi University.
-						<br />
-						<br />
-						I am a self motivated learner who can work both independently and collaboratively as a team. I am now learning ReactJS and Sass.
-						<br />
-						<br />
-						I love working on fun projects and keeping up with the programming world that is constantly growing.
+						<div className="desc">
+							My name is Maitray Bhardwaj. I am a web developer. I am currently pursuing Bachelors in Computer Science(Hons.) from Hansraj College, Delhi University.
+							<br />
+							<br />
+							I am a self motivated learner who can work both independently and collaboratively as a team.
+							<br />
+							<br />
+							I love working on fun projects and keeping up with the programming world that is constantly growing.
 						</div>
 					<h1># Skills</h1>
 						<div className="desc">Even though I have experience in both frontend and backend, I have more confidence in my frontend skills. So, my main area of expertise is frontend development.
 						<br />
 						<br />
-						As mentioned before, I also have experience working in backend development using NodeJS and popular Non-Relational Database Management Systems.
+						As mentioned before, I also have experience working in backend development using NodeJS and popular Non-Relational Database Management Systems like MongoDB.
 						</div>
 						<div>
 							<a target="_blank" rel="noreferrer" href={Resume} download="" className="resume">
@@ -86,6 +87,9 @@ function About (props) {
 					<div className="skills">
 						<a href="https://reactjs.org" target="_blank" rel="noreferrer" className="skill" title="React">
 							<SiReact />
+						</a>
+						<a href="https://tailwindcss.com" target="_blank" rel="noreferrer" className='skill' title='TailwindCSS'>
+							<SiTailwindcss />
 						</a>
 						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" className="skill" title="JavaScript">
 							<SiJavascript />						

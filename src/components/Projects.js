@@ -13,6 +13,24 @@ const projectList = [
 		]
 	},
 	{
+		name: "Cinematic",
+		url: "https://github.com/MaitrayBhardwaj/movie-app",
+		hostedOn: "https://maitraybhardwaj.github.io/movie-app/",
+		desc: "Simple movie app to browse info on movies and manage watch lists.",
+		techUsed: [
+			"React", "Firebase", "TailwindCSS", "Framer-motion", "React Router"
+		]
+	},
+	{
+		name: "OrderIn",
+		url: "https://github.com/MaitrayBhardwaj/orderin",
+		hostedOn: "https://maitraybhardwaj.github.io/orderin/",
+		desc: "Simple ordering app with React and Firebase",
+		techUsed: [
+			'React', 'Firebase', 'TailwindCSS', 'Framer-motion'
+		]
+	},
+	{
 		name: "50Days50Projects",
 		url: "https://github.com/MaitrayBhardwaj/50Days50Projects",
 		hostedOn: "https://maitraybhardwaj.github.io/50Days50Projects/",
@@ -45,7 +63,7 @@ const projectList = [
 		hostedOn: "https://maitraybhardwaj.github.io/chat-app",
 		desc: "Real time chat app built with React and Firebase",
 		techUsed: [
-			"CSS3", "React", "Firebase", "Firestore"
+			"CSS3", "React", "Firebase"
 		]
 	}
 ]
