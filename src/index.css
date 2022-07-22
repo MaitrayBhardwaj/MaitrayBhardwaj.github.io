@@ -79,11 +79,10 @@ body::-webkit-scrollbar-thumb {
 	color: black;
 }
 
-#home, #about, #projects{
+#home, #about, #projects, #contactMe{
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	transition: display 1s ease;
 }
 
 .banner .menuToggle{
@@ -185,7 +184,7 @@ body::-webkit-scrollbar-thumb {
 	margin: 1em 0 0 0;
 }
 
-#projects .banner h1:after, .info h1:after, .info h2:after{
+#contactMe .banner h1:after, #projects .banner h1:after, .info h1:after, .info h2:after{
 	transition: width 1s ease;
 	height: 3px;
 	background-color: white;
@@ -195,7 +194,11 @@ body::-webkit-scrollbar-thumb {
 	width: 0;
 }
 
-#projects .banner h1:after{
+#contactMe h1{
+	margin-top: 1.25em;
+}
+
+#contactMe .banner h1:after, #projects .banner h1:after{
 	transform: translateY(5px);
 }
 
@@ -207,7 +210,7 @@ body::-webkit-scrollbar-thumb {
 	width: 20%;
 }
 
-#projects .banner h1:hover:after{
+#contactMe .banner h1:hover:after, #projects .banner h1:hover:after{
 	width: 15%;
 }
 
@@ -374,6 +377,67 @@ body::-webkit-scrollbar-thumb {
 .banner-info small{
 	font-size: 1.2em;
 	margin-bottom: 1em;
+}
+
+.contact-form{
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-form-label{
+	display: flex;
+	flex-direction: column;
+	margin: 1em 0;
+}
+
+.contact-form-label > div{
+	font-size: 1.2em;
+	text-align: left;
+	margin: 0.35em 0;
+}
+
+.contact-form-label input, .contact-form-label textarea{
+	background-color: #191919 !important;
+	border: 1px solid white;
+	padding: 1em;
+	color: white;
+	min-width: 60vw;
+	font-size: 1em;
+}
+
+.contact-form-label textarea {
+	height: 10em;
+}
+
+.contact-form-label input:focus, .contact-form-label textarea:focus{
+	outline: 2px white solid;
+	border-radius: 0;
+}
+
+.contact-form-label input::placeholder, .contact-form-label textarea::placeholder{
+	color: #CCCCCC;
+}
+
+.contact-form button {
+	background-color: white;
+	color: #191919;
+	padding: 1em;
+	font-size: 1.2em;
+	font-weight: bold;
+	border: 2px solid transparent;
+	margin-bottom: 2em;
+}
+
+.contact-form button:hover{
+	background-color: #191919;
+	color: white;
+	border: 2px solid white;
+}
+
+.contact-form button:disabled{
+	cursor: not-allowed;
+	background-color: #CCCCCC;
+	color: black;
 }
 
 @keyframes notif-grow {

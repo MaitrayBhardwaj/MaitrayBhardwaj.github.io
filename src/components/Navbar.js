@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 import { BsList, BsHouseFill, BsInfoCircle, BsBox } from 'react-icons/bs'
+import { IoMdContacts } from 'react-icons/io'
 
 function Navbar (props) {
 	return (
@@ -39,6 +40,14 @@ function Navbar (props) {
 						<BsBox />
 					</button>
 					<span>Projects</span>
+				</div>
+			</Link>
+			<Link to="/contact">
+				<div className='menuLabel contactMe' onClick={props.toggleNavbar}>
+					<button>
+						<IoMdContacts />
+					</button>
+					<span>Contact Me</span>
 				</div>
 			</Link>
 		</motion.nav>
