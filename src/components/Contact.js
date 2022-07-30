@@ -60,48 +60,53 @@ const Contact = (props) => {
 	)
 
 	return (
-		<div id="contactMe" 
+		<div id="contactMe"
 			onClick={() => { props.isNavbar && props.toggleNavbar() }}
 		>
 			<div class="banner">
 				<button class="menuToggle" onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
-				<h1># Contact Me</h1>
-				<div>
-					<form className="contact-form" onSubmit={handleSubmit}>
-						<label className="contact-form-label">
-							<div>Your Name:</div>
-							<input 
-								type="text"
-								onChange={handleChange}
-								value={formData.name}
-								name="name"
-								placeholder='John Doe' 
-							/>
-						</label>
-						<label className="contact-form-label">
-							<div>Your Email:</div>
-							<input 
-								type="email"
-								onChange={handleChange}
-								value={formData.email}
-								name="email"
-								placeholder='johndoe1984@gmail.com' 
-							/>
-						</label>
-						<label className="contact-form-label">
-							<div>Your Message:</div>
-							<textarea
-								onChange={handleChange}
-								name='message'
-								value={formData.message}
-								placeholder='I would love to discuss some projects with you!' 
-							/>
-						</label>
-						<button disabled={!formData.isAllowed}>Submit</button>
-					</form>
-				</div>
+				<motion.div
+					initial={{ x: 30, opacity: 0.25 }}
+					animate={{ x: 0, opacity: 1 }}				
+				>
+					<h1># Contact Me</h1>
+					<div>
+						<form className="contact-form" onSubmit={handleSubmit}>
+							<label className="contact-form-label">
+								<div>Your Name:</div>
+								<input 
+									type="text"
+									onChange={handleChange}
+									value={formData.name}
+									name="name"
+									placeholder='John Doe' 
+								/>
+							</label>
+							<label className="contact-form-label">
+								<div>Your Email:</div>
+								<input 
+									type="email"
+									onChange={handleChange}
+									value={formData.email}
+									name="email"
+									placeholder='johndoe1984@gmail.com' 
+								/>
+							</label>
+							<label className="contact-form-label">
+								<div>Your Message:</div>
+								<textarea
+									onChange={handleChange}
+									name='message'
+									value={formData.message}
+									placeholder='I would love to discuss some projects with you!' 
+									/>
+							</label>
+							<button disabled={!formData.isAllowed}>Submit</button>
+						</form>
+					</div>
+				</motion.div>
 			</div>
 			{ hasSubmitted && submitNotif }
 		</div>

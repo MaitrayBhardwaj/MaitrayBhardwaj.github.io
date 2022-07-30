@@ -1,5 +1,5 @@
-# Portfolio(with React)
+# Portfolio
 
-Current portfolio redeveloped with React.
+Maitray Bhardwaj's current portfolio.
 
-Hosted on: https://maitraybhardwaj.github.io/portfolio-react/#/
+Hosted on: https://maitraybhardwaj.me
