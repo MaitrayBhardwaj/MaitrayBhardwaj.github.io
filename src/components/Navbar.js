@@ -12,7 +12,7 @@ function Navbar (props) {
 			exit={{ x: -300 }}
 			transition={{ type:"tween" }}
 			className="navbar">
-			<div className="menuLabel menu" onClick={props.toggleNavbar}>
+			<div className="menuLabel menu" aria-label='Hide Navbar' onClick={props.toggleNavbar}>
 				<button>
 					<BsList />
 				</button>
@@ -20,7 +20,7 @@ function Navbar (props) {
 			</div>
 			<Link to="/">
 				<div className="menuLabel home" onClick={props.toggleNavbar}>
-					<button>
+					<button aria-label='Home'>
 						<BsHouseFill />
 					</button>
 					<span>Home</span>
@@ -28,7 +28,7 @@ function Navbar (props) {
 			</Link>
 			<Link to="/about">
 				<div className="menuLabel about" onClick={props.toggleNavbar}>
-					<button>
+					<button aria-label='About'>
 						<BsInfoCircle />
 					</button>
 					<span>About</span>
@@ -36,7 +36,7 @@ function Navbar (props) {
 			</Link>
 			<Link to="/projects">
 				<div className="menuLabel projects" onClick={props.toggleNavbar}>
-					<button>
+					<button aria-label="Projects">
 						<BsBox />
 					</button>
 					<span>Projects</span>
@@ -44,7 +44,7 @@ function Navbar (props) {
 			</Link>
 			<Link to="/contact">
 				<div className='menuLabel contactMe' onClick={props.toggleNavbar}>
-					<button>
+					<button aria-label='Contact Me'>
 						<IoMdContacts />
 					</button>
 					<span>Contact Me</span>

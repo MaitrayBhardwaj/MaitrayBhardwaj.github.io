@@ -36,7 +36,7 @@ function About (props) {
 	return (
 		<div id="about" onClick={() => { props.isNavbar && props.toggleNavbar() }}>
 			<div className="banner">
-				<button className="menuToggle" onClick={props.toggleNavbar}>
+				<button className="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
 				<motion.div className="info"

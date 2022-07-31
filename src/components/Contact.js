@@ -64,7 +64,7 @@ const Contact = (props) => {
 			onClick={() => { props.isNavbar && props.toggleNavbar() }}
 		>
 			<div class="banner">
-				<button class="menuToggle" onClick={props.toggleNavbar}>
+				<button class="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
 				<motion.div

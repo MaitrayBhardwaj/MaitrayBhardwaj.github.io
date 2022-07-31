@@ -76,7 +76,7 @@ function Projects (props) {
 		<div id="projects" 
 			onClick={() => { props.isNavbar && props.toggleNavbar() }}>
 			<div class="banner">
-				<button class="menuToggle" onClick={props.toggleNavbar}>
+				<button class="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
 				<h1># Projects</h1>

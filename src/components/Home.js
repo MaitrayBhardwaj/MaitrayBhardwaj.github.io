@@ -33,14 +33,15 @@ function Home (props) {
 			id="home" 
 			onClick={() => { props.isNavbar && props.toggleNavbar() }}>
 			<div className="banner">
-				<button className="menuToggle" onClick={props.toggleNavbar}>
+				<button className="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
 				<motion.div className="banner-info" animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }}>
 					<motion.img
-					 animate={{ scale: 1, x: 0 }}
-					 initial={{ scale: 0 }}
-					 src={SelfImg} alt="MaitrayBhardwaj" target="_blank" className="selfImg" />
+						animate={{ scale: 1, x: 0 }}
+						initial={{ scale: 0 }}
+						src={SelfImg} 
+						alt="MaitrayBhardwaj" target="_blank" className="selfImg" />
 					<h1 className="welcome">{ headerText }</h1>
 					<small>I'm a web developer!</small>
 					<h3>Available on</h3>
