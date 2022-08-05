@@ -7,7 +7,8 @@ import {
 	SiMongodb, SiExpress,
 	SiBootstrap, SiHtml5, 
 	SiPython, SiNodedotjs, 
-	SiCplusplus, SiTailwindcss } from 'react-icons/si'
+	SiCplusplus, SiTailwindcss, 
+	SiFirebase } from 'react-icons/si'
 
 import { FaCss3 } from 'react-icons/fa'
 
@@ -93,6 +94,9 @@ function About (props) {
 						</a>
 						<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" className="skill" title="JavaScript">
 							<SiJavascript />						
+						</a>
+						<a href="https://firebase.google.com" target="_blank" rel="noreferrer" className="skill" title="Firebase">
+							<SiFirebase />						
 						</a>
 						<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer" className="skill" title="CSS3">
 							<FaCss3 />
