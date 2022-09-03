@@ -25,7 +25,7 @@ const Contact = (props) => {
 		else {
 			setFormData(prevData => ({ ...prevData, isAllowed: false }))
 		}
-
+		// eslint-disable-next-line
 	}, [formData.email, formData.message, formData.name])
 
 	const handleChange = (ev) => {
