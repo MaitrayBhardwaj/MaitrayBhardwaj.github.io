@@ -69,14 +69,14 @@ const projectList = [
 ]
 
 function Projects (props) {
-	const projectElements = projectList.map(project => (
-		<Project project={project} />
+	const projectElements = projectList.map((project, idx) => (
+		<Project project={project} key= {idx} />
 	))
 	return (
 		<div id="projects" 
 			onClick={() => { props.isNavbar && props.toggleNavbar() }}>
 			<div class="banner">
-				<button class="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
+				<button className="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
 				<h1># Projects</h1>

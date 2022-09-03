@@ -71,13 +71,17 @@ function About (props) {
 							I am a self motivated learner who can work both independently and collaboratively as a team.
 							<br />
 							<br />
-							I love working on fun projects and keeping up with the programming world that is constantly growing.
+							I love working on fun projects and keeping up with the programming world that is constantly changing in many ways.
 						</div>
 					<h1># Skills</h1>
-						<div className="desc">Even though I have experience in both frontend and backend, I have more confidence in my frontend skills. So, my main area of expertise is frontend development.
-						<br />
-						<br />
-						As mentioned before, I also have experience working in backend development using NodeJS and popular Non-Relational Database Management Systems like MongoDB.
+						<div className="desc">
+							Even though I have experience in both frontend and backend, I have more confidence in my frontend skills. So, my main area of expertise is frontend development.
+							<br />
+							<br />
+							As mentioned before, I also have experience working in backend development using NodeJS and popular Non-Relational Database like MongoDB.
+							<br />
+							<br />
+							Putting web development aside, I have fair experience in both C++ and Python. Most of my Python experience stems from my attempts to get into Data Science. I have used Pandas, Numpy, Seaborn, Scikit-Learn and Flask. 
 						</div>
 						<div>
 							<a target="_blank" rel="noreferrer" href={Resume} download="" className="resume">

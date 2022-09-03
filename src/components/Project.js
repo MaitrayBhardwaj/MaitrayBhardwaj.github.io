@@ -17,8 +17,8 @@ function Project(props) {
 				{ project.hostedOn && <a href={project.hostedOn}><BsBoxArrowUpRight /></a> }
 			</div>
 			<div className="projTechList">
-				{ project.techUsed.map(tech => (
-					<span className="projTech">{tech}</span>
+				{ project.techUsed.map((tech, idx) => (
+					<span className="projTech" key={idx}>{tech}</span>
 				)) }
 			</div>
 		</motion.div>

@@ -26,7 +26,7 @@ const Contact = (props) => {
 			setFormData(prevData => ({ ...prevData, isAllowed: false }))
 		}
 
-	}, [formData])
+	}, [formData.email, formData.message, formData.name])
 
 	const handleChange = (ev) => {
 		setFormData(prevData => (
@@ -64,14 +64,14 @@ const Contact = (props) => {
 			onClick={() => { props.isNavbar && props.toggleNavbar() }}
 		>
 			<div class="banner">
-				<button class="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
+				<button className="menuToggle" aria-label='Show Navbar' onClick={props.toggleNavbar}>
 					<BsList />
 				</button>
+				<h1># Contact Me</h1>
 				<motion.div
 					initial={{ x: 30, opacity: 0.25 }}
 					animate={{ x: 0, opacity: 1 }}				
 				>
-					<h1># Contact Me</h1>
 					<div>
 						<form className="contact-form" onSubmit={handleSubmit}>
 							<label className="contact-form-label">
