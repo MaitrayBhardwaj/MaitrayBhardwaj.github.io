@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { doc, updateDoc, increment } from "firebase/firestore";
-
-import { db } from './firebase'
 
 import Home from './components/Home'
 import Navbar from './components/Navbar'
@@ -13,14 +10,6 @@ import Contact from './components/Contact';
 
 function App() {
 	const [isNavbar, setIsNavbar] = useState(false)
-	
-	useEffect(() => {
-		const viewsRef = doc(db, "views", "views");
-		
-		updateDoc(viewsRef, {
-			views: increment(1)
-		})
-	}, [])
 
 	const toggleNavbar = () => {
 		setIsNavbar(prev => !prev)

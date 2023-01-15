@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
-import { collection, addDoc } from 'firebase/firestore'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 import { BsList } from 'react-icons/bs'
-
-import { db } from '../firebase'
 
 const Contact = (props) => {
 	const [formData, setFormData] = useState({
@@ -25,7 +23,6 @@ const Contact = (props) => {
 		else {
 			setFormData(prevData => ({ ...prevData, isAllowed: false }))
 		}
-		// eslint-disable-next-line
 	}, [formData.email, formData.message, formData.name])
 
 	const handleChange = (ev) => {
@@ -36,16 +33,17 @@ const Contact = (props) => {
 
 	const handleSubmit = async (ev) => {
 		ev.preventDefault()
-		await addDoc(collection(db, "messages"), {
-			name: formData.name,
-			email: formData.email,
-			message: formData.message
-		});
-		
-		setFormData({ name: '', email: '', message: '' })
-		setHasSubmitted(true)
 
-		setTimeout(() => setHasSubmitted(false), 2500)
+        emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, formData, import.meta.env.VITE_EMAIL_PUBLIC_KEY)
+            .then(res => {
+                setFormData({ name: '', email: '', message: '' })
+                setHasSubmitted(true)
+        
+                setTimeout(() => setHasSubmitted(false), 2500)
+            })
+            .catch(err => {
+                alert("Unable to send email. Try again later.")
+            })
 	}
 
 	const submitNotif = (

@@ -14,7 +14,10 @@ function Project(props) {
 			<div className="projDesc">{project.desc}</div>
 			<div className="projLinks">
 				<a href={project.url} target="_blank" rel="noreferrer"><BsGithub /></a>
-				{ project.hostedOn && <a href={project.hostedOn}><BsBoxArrowUpRight /></a> }
+				{ 
+                    project.hostedOn && 
+                    <a href={project.hostedOn} target="_blank" rel="noreferrer"><BsBoxArrowUpRight /></a> 
+                }
 			</div>
 			<div className="projTechList">
 				{ project.techUsed.map((tech, idx) => (
