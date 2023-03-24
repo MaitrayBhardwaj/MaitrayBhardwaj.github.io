@@ -154,6 +154,7 @@ body::-webkit-scrollbar-thumb {
 	background-color: white;
 	color: #191919;
 	padding: 0.5em;
+    height: 1em;
 	text-align: center;
 }
 
