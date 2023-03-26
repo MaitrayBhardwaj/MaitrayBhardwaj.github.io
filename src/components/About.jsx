@@ -84,7 +84,7 @@ function About (props) {
 							Putting web development aside, I have fair experience in both C++ and Python. Most of my Python experience stems from my attempts to get into Data Science. I have used Pandas, Numpy, Seaborn, Scikit-Learn and Flask. 
 						</div>
 						<div>
-							<a target="_blank" rel="noreferrer" href={Resume} download="" className="resume">
+							<a target="_blank" rel="noreferrer" href="https://drive.google.com/file/d/1GMVnx6aGhro1R3nJ6VhQuVkS8aAGiE9z/view" className="resume">
 								<button>Resume</button>
 							</a>
 						</div>
