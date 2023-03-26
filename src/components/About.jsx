@@ -13,7 +13,6 @@ import {
 import { FaCss3 } from 'react-icons/fa'
 
 import SelfImg from '../assets/self.jpg'
-import Resume from '../assets/Resume.pdf'
 
 function About (props) {
 	const [isNotifVis, setIsNotifVis] = useState(false)
